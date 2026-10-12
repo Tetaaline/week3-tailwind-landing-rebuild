@@ -1,0 +1,224 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f4ed;
+    color: #243238;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #f7f4ed;
+}
+
+.logo {
+    color: #1f4e5f;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #243238;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #5f7a61;
+}
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    color: white;
+    background:
+        linear-gradient(rgba(20, 45, 45, 0.65), rgba(20, 45, 45, 0.65)),
+        url("../images/hero.jpg") center/cover;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    color: #5f7a61;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+    color: #e9b949;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #e9b949;
+    color: #243238;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #f2cc70;
+}
+
+.destinations {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.destinations h2,
+.culture h2,
+.travel h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-intro {
+    margin-bottom: 30px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.place-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+}
+
+.place-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #1f4e5f;
+    margin-bottom: 8px;
+}
+
+.culture {
+    padding: 65px 8%;
+    background-color: #e8e6d9;
+    text-align: center;
+}
+
+.culture > div {
+    max-width: 650px;
+    margin: auto;
+}
+
+.travel {
+    padding: 65px 8%;
+    background-color: #1f4e5f;
+    color: white;
+    text-align: center;
+}
+
+.travel p {
+    margin-bottom: 22px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #243238;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .destinations {
+        padding: 50px 6%;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destinations h2,
+    .culture h2,
+    .travel h2 {
+        font-size: 27px;
+    }
+}
